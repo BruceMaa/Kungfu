@@ -15,3 +15,6 @@
 
 # Intellij IDEA
 .idea/
+
+# 防止正确的配置文件信息上传
+kungfu.json
