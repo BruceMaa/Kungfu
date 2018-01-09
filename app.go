@@ -22,14 +22,16 @@ func init() {
 }
 
 func main() {
-	server := &http.Server{
+
+	app := &http.Server{
 		Addr:         fmt.Sprintf(":%d", ChatConfig.Port),
 		Handler:      initRouter(),
 		ReadTimeout:  5 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		WriteTimeout: 5 * time.Second,
 	}
 
 	Logger.Debug("当前运行环境：", gin.Mode())
 
-	server.ListenAndServe()
+	app.ListenAndServe()
+
 }

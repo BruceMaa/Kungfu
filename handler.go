@@ -29,7 +29,8 @@ func wechatMpServer(router *gin.Engine) {
 		})
 	}
 
-	wechatMp.SetTextHandlerFunc(TextMessageEncryptHandler)
+	//wechatMp.SetTextHandlerFunc(TextMessageEncryptHandler)
+	wechatMp.SetTextHandlerFunc(TextMessageHandler)
 }
 
 func TextMessageHandler(request *mp.TextMessage) string {
